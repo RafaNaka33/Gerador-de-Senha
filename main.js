@@ -71,5 +71,10 @@ function classificaSenha(tamanhoAlfabeto){
     const valorEntropia = document.querySelector('.entropia');
     valorEntropia.textContent = "um computador pode levar até " + Math.floor(2**entropia/(100e6*60*60*24)) + " dias para descobrir a senha"; //100e6 é o numero de tentativas por segundo, 60 é minutos, horas e 24 é dias
     }
-
-
+const botaoGerar = document.querySelector('.botao-gerar');
+botaoGerar.onclick = geraSenha;
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    geraSenha();
+  }
+});
