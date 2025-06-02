@@ -153,3 +153,9 @@ label{
         flex-direction: row;
     }
 }
+.botao-gerar{
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
